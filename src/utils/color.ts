@@ -6,8 +6,5 @@ export const color = {
     text: '#FFFFFF',
     black: '#1A1A1A',
     white: '#FFFFFF',
-    border: {
-        light: '#E0E0E0',
-        dark: '#424242',
-    },
+    gray: '#B3B3B3',
 }

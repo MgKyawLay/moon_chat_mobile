@@ -1,12 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import BottomTab from './BottomTab'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeTabs from './HomeTabs';
+import { NewChat } from '../screens';
+
+const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
     return (
         <NavigationContainer>
-            <BottomTab />
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="Home" component={HomeTabs} />
+                <Stack.Screen name="NewChat" component={NewChat} />
+            </Stack.Navigator>
         </NavigationContainer>
     )
 }

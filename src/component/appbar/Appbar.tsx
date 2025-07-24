@@ -10,9 +10,11 @@ interface Props {
 const Appbar = ({ title, prefixIcon, suffixIcon }: Props) => {
     return (
         <View style={styles.root}>
-            {prefixIcon}
-            <Text style={styles.title}>{title}</Text>
-            {suffixIcon}
+            <View style={styles.iconContainer}>{prefixIcon}</View>
+            <View style={styles.titleContainer}>
+                <Text style={styles.title}>{title}</Text>
+            </View>
+            <View style={styles.iconContainer}>{suffixIcon}</View>
         </View>
     )
 }
@@ -35,6 +37,16 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingHorizontal: 16,
+    },
+    iconContainer: {
+        width: 40, // Fixed width for icons
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    titleContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     title: {
         fontSize: 16,

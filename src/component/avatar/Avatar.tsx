@@ -7,7 +7,7 @@ interface Props {
     title?: string;
 }
 
-const Avatar = ({ title }: Props) => {
+const Avatar = ({ title, }: Props) => {
     function getInitials(name: string): string {
         // Split by spaces and camelCase
         const words = name
