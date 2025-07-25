@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native'
+import { StyleSheet,  TextInput, View } from 'react-native'
 import React from 'react'
 import { color } from '../../utils/color'
 import { SearchIcon } from '../../icons'
@@ -12,7 +12,7 @@ const Searchbox = () => {
                 style={styles.input}
             />
             <View style={styles.icon}>
-                <SearchIcon height={24} width={24} />
+                <SearchIcon height={24} width={24} color={color.gray}/>
             </View>
         </View>
     )
@@ -25,10 +25,13 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     input: {
-        height: 50,
-        borderColor: color.black,
+        // height: 50,
         borderWidth: 1,
-        borderRadius: 15,
+        borderColor: color.gray,
+        borderRadius: 10,
+        // borderColor: color.black,
+        // borderWidth: 1,
+        // borderRadius: 15,
         paddingHorizontal: 10,
         fontSize: 16,
         color: color.black,
@@ -36,6 +39,6 @@ const styles = StyleSheet.create({
     icon: {
         position: 'absolute',
         right: 10,
-        top: 15,
+        top: 10,
     }
 })

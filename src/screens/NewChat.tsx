@@ -17,6 +17,14 @@ const NewChat = () => {
     </View>
   );
 
+  const handleNewContact = () => {
+    navigation.navigate('AddContact');
+  }
+
+  const handleNewGroup = () => {
+    navigation.navigate('NewGroup');
+  }
+
   return (
     <View style={styles.root}>
       <Appbar
@@ -25,11 +33,11 @@ const NewChat = () => {
       />
       <View style={styles.body}>
         <SearchInput />
-        <Pressable style={styles.addButton}>
+        <Pressable style={styles.addButton} onPress={handleNewContact}>
           <PlusIcon height={24} width={24} />
           <Text>New contact</Text>
         </Pressable>
-        <Pressable style={styles.addButton}>
+        <Pressable style={styles.addButton} onPress={handleNewGroup}>
           <PlusIcon height={24} width={24} />
           <Text>New group</Text>
         </Pressable>

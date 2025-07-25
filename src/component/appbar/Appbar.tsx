@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingHorizontal: 16,
+        paddingHorizontal: 10,
     },
     iconContainer: {
         width: 40, // Fixed width for icons

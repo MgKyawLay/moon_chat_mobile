@@ -6,3 +6,4 @@ export {default as PlusIcon} from './Plus';
 export {default as MessageMultiColorIcon} from './MessageMultiColor';
 export {default as ChevronLeftIcon} from './ChevronLeft';
 export {default as SearchIcon} from './Search';
+export {default as CheckCircleIcon} from './CheckCircle';
