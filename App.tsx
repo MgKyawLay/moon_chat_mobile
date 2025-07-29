@@ -1,14 +1,14 @@
 
 import { StatusBar, StyleSheet } from 'react-native';
 import RootNavigator from './src/navigation/RootNavigator';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 function App() {
   return (
-    <SafeAreaProvider style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar barStyle={'dark-content'} backgroundColor={'#ffffff'} />
       <RootNavigator />
-    </SafeAreaProvider>
+    </SafeAreaView>
   );
 }
 

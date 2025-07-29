@@ -3,4 +3,6 @@ type RootStackParamList = {
     NewChat: undefined;
     AddContact: undefined;
     NewGroup: undefined;
+    NewCall: undefined;
+    PhoneCallScreen: undefined;
 }

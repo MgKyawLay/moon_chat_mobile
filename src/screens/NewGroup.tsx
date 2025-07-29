@@ -18,7 +18,6 @@ const NewGroup = ({ navigation }: Props) => {
         phoneNumber: string;
         email: string;
     }[]>([]);
-    console.log("🚀 ~ NewGroup ~ selectedContacts:", selectedContacts)
 
     const emptyRender = () => (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

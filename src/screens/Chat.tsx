@@ -39,7 +39,7 @@ const Chat = () => {
                     </View>
                 )}
                 keyExtractor={(item, index) => index.toString()}
-                contentContainerStyle={{ padding: 16 }}
+                contentContainerStyle={{ padding: 16, minHeight: '90%' }}
                 showsVerticalScrollIndicator={false}
                 ListEmptyComponent={emptyRender}
             />

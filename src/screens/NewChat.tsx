@@ -1,15 +1,15 @@
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { color } from '../utils/color'
-import { Appbar, Avatar, SearchInput } from '../component'
-import { ChevronLeftIcon, PlusIcon } from '../icons'
-import { useNavigation } from '@react-navigation/native'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { contactData } from '../utils/data'
+import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { color } from '../utils/color';
+import { Appbar, Avatar, SearchInput } from '../component';
+import { ChevronLeftIcon, PlusIcon } from '../icons';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { contactData } from '../utils/data';
 
 const NewChat = () => {
-
-  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const emptyRender = () => (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -19,17 +19,23 @@ const NewChat = () => {
 
   const handleNewContact = () => {
     navigation.navigate('AddContact');
-  }
+  };
 
   const handleNewGroup = () => {
     navigation.navigate('NewGroup');
-  }
+  };
 
   return (
     <View style={styles.root}>
       <Appbar
-        title='New Chat'
-        prefixIcon={<ChevronLeftIcon height={30} width={30} onPress={() => navigation.goBack()} />}
+        title="New Chat"
+        prefixIcon={
+          <ChevronLeftIcon
+            height={30}
+            width={30}
+            onPress={() => navigation.goBack()}
+          />
+        }
       />
       <View style={styles.body}>
         <SearchInput />
@@ -55,20 +61,22 @@ const NewChat = () => {
           )}
           keyExtractor={(item) => item.id}
           showsVerticalScrollIndicator={false}
-          ItemSeparatorComponent={() => <View style={{ height: 1, backgroundColor: color.gray }} />}
+          ItemSeparatorComponent={() => (
+            <View style={{ height: 1, backgroundColor: color.gray }} />
+          )}
           ListEmptyComponent={emptyRender}
         />
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default NewChat
+export default NewChat;
 
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   body: {
     flex: 1,
@@ -77,11 +85,10 @@ const styles = StyleSheet.create({
   addButton: {
     flexDirection: 'row',
     paddingVertical: 10,
-    gap: 16
+    gap: 16,
   },
   contact: {
     flexDirection: 'row',
     gap: 8,
-
-  }
-})
+  },
+});

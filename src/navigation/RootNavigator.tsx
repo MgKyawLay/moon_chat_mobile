@@ -3,7 +3,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeTabs from './HomeTabs';
-import { AddContact, NewChat, NewGroup } from '../screens';
+import { AddContact, NewChat, NewGroup , NewCall, PhoneCallScreen} from '../screens';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +15,8 @@ const RootNavigator = () => {
                 <Stack.Screen name="NewChat" component={NewChat} />
                 <Stack.Screen name="AddContact" component={AddContact} />
                 <Stack.Screen name="NewGroup" component={NewGroup} />
+                <Stack.Screen name="NewCall" component={NewCall} />
+                <Stack.Screen name="PhoneCallScreen" component={PhoneCallScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     )

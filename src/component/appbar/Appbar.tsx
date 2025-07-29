@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     iconContainer: {
-        width: 40, // Fixed width for icons
+        width: 40,
         alignItems: 'center',
         justifyContent: 'center',
     },
