@@ -10,6 +10,7 @@ import {
   NewCall,
   PhoneCallScreen,
   LoginScreen,
+  SignUpScreen,
 } from '../screens';
 import { Session } from '@supabase/supabase-js';
 import { supabase } from '../lib/supabase';
@@ -40,6 +41,7 @@ const RootNavigator = () => {
           initialRouteName="Login"
         >
           <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name='SignUp' component={SignUpScreen} />
         </Stack.Navigator>
       ) : (
         <Stack.Navigator

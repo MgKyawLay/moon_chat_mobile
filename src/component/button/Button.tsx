@@ -13,12 +13,13 @@ interface Props {
   style?: ViewStyle;
   textStyle?: TextStyle;
   title: string;
+  onPress?: () => void;
 }
 
-const Button = ({ style, title, textStyle }: Props) => {
+const Button = ({ style, title, textStyle, onPress }: Props) => {
   return (
-    <TouchableOpacity style={{ ...styles.root, ...style }}>
-      <Text style={{...styles.buttonText, ...textStyle}}>{title}</Text>
+    <TouchableOpacity style={{ ...styles.root, ...style }} onPress={onPress}>
+      <Text style={{ ...styles.buttonText, ...textStyle }}>{title}</Text>
     </TouchableOpacity>
   );
 };
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: color.white,
     textAlign: 'center',
-    textAlignVertical:'center',
+    textAlignVertical: 'center',
     fontWeight: 'semibold',
     fontSize: 16,
   },

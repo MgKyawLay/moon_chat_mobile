@@ -1,14 +1,17 @@
-import { Alert,  StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
 import React, { useState } from 'react';
 import { color } from '../../utils/color';
 import { supabase } from '../../lib/supabase';
 import { MessageMultiColorIcon } from '../../icons';
 import { Button, TextButton } from '../../component';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const signInWithEmail = async () => {
     setLoading(true);
@@ -34,6 +37,10 @@ const Login = () => {
     setLoading(false);
   };
 
+  const handleCreateAccount = () => {
+    navigation.navigate('SignUp')
+  }
+
   return (
     <View style={styles.root}>
       <View style={styles.container}>
@@ -57,9 +64,14 @@ const Login = () => {
             placeholderTextColor={color.gray}
             secureTextEntry
           />
-          <Button style={styles.button} title='Login'/>
-          <Button style={styles.secondaryButton} title='Create New Account' textStyle={styles.secondaryButtonText}/>
-          <TextButton text='Forgot password?'/>
+          <Button style={styles.button} title="Login" />
+          <Button
+            style={styles.secondaryButton}
+            title="Create New Account"
+            textStyle={styles.secondaryButtonText}
+            onPress={handleCreateAccount}
+          />
+          <TextButton text="Forgot password?" />
         </View>
         {/* <View style={[styles.verticallySpaced, styles.mt20]}>
           <TextInput
@@ -138,7 +150,7 @@ const styles = StyleSheet.create({
     gap: 20,
     marginTop: 32,
   },
-  button:{
+  button: {
     alignSelf: 'auto',
   },
   secondaryButton: {
@@ -147,5 +159,5 @@ const styles = StyleSheet.create({
   },
   secondaryButtonText: {
     color: color.black,
-  }
+  },
 });

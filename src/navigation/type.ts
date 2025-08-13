@@ -5,4 +5,5 @@ type RootStackParamList = {
     NewGroup: undefined;
     NewCall: undefined;
     PhoneCallScreen: undefined;
+    SignUp: undefined;
 }
