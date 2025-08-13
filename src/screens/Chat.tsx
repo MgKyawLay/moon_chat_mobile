@@ -31,6 +31,7 @@ const Chat = () => {
                 prefixIcon={<Avatar title='UserName' />}
                 suffixIcon={<PlusIcon width={24} height={24} color={color.primary} onPress={handleNewMessage} />}
             />
+    
             <FlatList
                 data={[]}
                 renderItem={({ item }) => (
